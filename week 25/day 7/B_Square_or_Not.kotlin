@@ -1,0 +1,64 @@
+import kotlin.math.sqrt
+fun main()
+{
+    val t=readLine()!!.toInt()
+    repeat(t)
+    {
+        val n=readLine()!!.toInt()
+        val s=readLine()!!
+        val sq=sqrt(n.toDouble()).toInt()
+        if((sq*sq)!=n)
+        {
+            println("No")
+        }
+        else
+        {
+            var flag=false
+            var count=0
+            var i=0
+            val p=MutableList(sq.toInt()){0}
+            val q=MutableList(sq.toInt()){1}
+            for(i in 0 until sq.toInt())
+            {
+                if(i==(sq-1).toInt()||i==0)
+                {
+                    p[i]=1
+                }
+            }
+            while(i<n)
+            {
+                count++
+                val x=mutableListOf<Int>()
+                for(j in i until(i+sq).toInt())
+                {
+                    x.add(s[j]-'0')
+                }
+                if(count==1 || count==sq.toInt())
+                {
+                    if(q!=x)
+                    {
+                        flag=true
+                        break
+                    }
+                }
+                else
+                {
+                    if(p!=x)
+                    {
+                        flag= true
+                        break
+                    }
+                }
+                i=i+sq.toInt()
+            }
+            if(flag)
+            {
+                println("No")
+            }
+            else
+            {
+                println("Yes")
+            }
+        }
+    }
+}

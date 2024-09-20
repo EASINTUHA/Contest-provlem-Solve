@@ -1,0 +1,18 @@
+fun main() {
+    val t=readLine()!!.toInt()
+    repeat(t)
+    {
+        val(n,m)=readLine()!!.split(" ").map
+        {
+            it.toInt() 
+        }
+        if(n<=m)
+        {
+            println("$n $m")
+        }
+        else
+        {
+            println("$m $n")
+        }
+    }
+}

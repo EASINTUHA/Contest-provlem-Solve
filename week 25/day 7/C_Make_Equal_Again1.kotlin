@@ -1,0 +1,31 @@
+fun main()
+{
+    val t=readLine()!!.toInt()
+    repeat(t)
+    {
+        val n=readLine()!!.toInt()
+        val v=readLine()!!.split(" ").map { it.toInt() }.toMutableList()
+        var i=0
+        var j=n-1
+        var left=0L
+        var right=0L
+        while(i<n && v[i]==v[0])
+        {
+            i++
+            left++
+        }
+        while(j>=0 && v[j]==v[n-1])
+        {
+            j--
+            right++
+        }
+        if(v[0]==v[n-1])
+        {
+            println(maxOf(0L,n.toLong()-left-right))
+        }
+        else
+        {
+            println(minOf(n.toLong()-left,n.toLong()-right))
+        }
+    }
+}
