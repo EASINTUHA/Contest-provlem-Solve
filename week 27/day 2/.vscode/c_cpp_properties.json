@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/MinGW/include/c++/9.0.0", // Update this path to your MinGW version
+                "C:/MinGW/lib/gcc/x86_64-w64-mingw32/9.0.0/include/c++", // Update this path to your MinGW version
+                "C:/MinGW/lib/gcc/x86_64-w64-mingw32/9.0.0/include" // Update this path to your MinGW version
+            ],
+            "defines": [],
+            "compilerPath": "C:/MinGW/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
